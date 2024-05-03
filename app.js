@@ -18,14 +18,22 @@ import ReactDOM from "react-dom/client";
 // React functional component
 
 
-const Title = (
-      <h1 className="head">namaste react functional Title1</h1>
-);
+const Title = () =>
+     ( <h1 className="head">namaste react functional Title1</h1>
+)
+
 // both code are same
 // component composition
 const HeadingComponent = ()=>
 <div id="container">
-  {Title}
+// using this 1st way we can write one functional component in another component
+  {Title()} 
+  // using this 2nd way we can write one functional component in another component
+  <Title></Title>
+  // using this 3rd way we can write one functional component in another component
+  <Title />
+
+ 
      <h1 className="heading">namaste react functional component</h1>
      </div>
 // this is react functional component return jsx
